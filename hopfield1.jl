@@ -1,4 +1,5 @@
 using Random
+using LinearAlgebra
 
 struct Hopfield
     num_neurons::Int
@@ -88,8 +89,6 @@ function hammingdistance(pattern1::Vector{Int}, pattern2::Vector{Int})
 end
 
 hammingdistance(patterns[1, :], retrieved_pattern)
-
-using LinearAlgebra
 
 function cosinesimilarity(pattern1::Vector{Int}, pattern2::Vector{Int})
     if length(pattern1) != length(pattern2)
